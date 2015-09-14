@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6yX-wd-LGA">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--HTagPopupTable-->
+        <scene sceneID="4Qe-Bx-zEn">
+            <objects>
+                <tableViewController title="HashTagPopup: Table" id="uNy-17-TGA" userLabel="HTagPopupTable" customClass="HTagPopUpTableController" customModule="TwitterTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1oO-1G-UAW">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="263"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HashTagCell" id="4xs-H2-UjA" customClass="HashTagCell" customModule="TwitterTicker" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4xs-H2-UjA" id="2m7-Bm-jqC">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSx-LQ-jXz" userLabel="HashTagLabel">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="23"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omy-NF-sCB">
+                                            <rect key="frame" x="215" y="8" width="30" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <state key="normal" title="X">
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="hashTagLabel" destination="gSx-LQ-jXz" id="bxG-d7-mxJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="delegate" destination="uNy-17-TGA" id="egU-wU-A1f"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NnE-R8-ZCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149" y="797.5"/>
+        </scene>
+        <!--Tweet Table-->
+        <scene sceneID="VgW-fR-Quf">
+            <objects>
+                <tableViewController title="Tweet TAble" automaticallyAdjustsScrollViewInsets="NO" id="pGg-6v-bdr" userLabel="Tweet Table" customClass="TweetTableController" customModule="TwitterTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="1" green="0.69831447957584936" blue="0.64703283942536205" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.73914930555555558" green="0.4957041393697903" blue="0.27870484208530721" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.73725490196078436" green="0.49411764705882355" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TweetCell" rowHeight="60" id="m0d-ak-lc9" customClass="TweetCell" customModule="TwitterTicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scrolling Text Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMy-om-BXt" userLabel="scrollingTextLabel" customClass="MarqueeLabel" customModule="TwitterTicker" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="601" height="60"/>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="42"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="scrollingTextLabel" destination="kMy-om-BXt" id="mDL-OM-YBF"/>
+                                    <segue destination="Ah7-4n-0Wa" kind="show" identifier="masterShowDetail" id="jUr-3t-vfg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="pGg-6v-bdr" id="P41-gY-KXY"/>
+                            <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="4Yu-42-Bke">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zq9-MB-tRt">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="45"/>
+                            <state key="normal" title="#">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" red="0.0024961902751886589" green="0.26608819121408833" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="6tE-lU-1Zn" kind="unwind" identifier="unwindToTweetTable" unwindAction="unwindToTweetTable:" id="4zF-bl-S35"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605" y="64"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="Cn3-H9-jdl">
+            <objects>
+                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="DetailController" customModule="TwitterTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lei-5M-9Gs">
+                                <rect key="frame" x="54" y="97" width="492" height="406"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="35"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="62x-JV-TTJ"/>
+                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" id="JzS-HC-Rnl"/>
+                            <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0Ru-DD-glA" appends="YES" id="u4C-OM-sjT"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="fal-L6-jFr"/>
+                    <connections>
+                        <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="7xP-qp-jEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
+                <exit id="6tE-lU-1Zn" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" id="0Ru-DD-glA">
+                    <connections>
+                        <action selector="swipeDownToUnwind:" destination="Ah7-4n-0Wa" id="lR4-J6-zG1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1343" y="64"/>
+        </scene>
+        <!--HTagPopup-->
+        <scene sceneID="q3Y-ZO-9ZT">
+            <objects>
+                <viewController storyboardIdentifier="HashTagPopup" title="HashTagPopup" modalTransitionStyle="crossDissolve" id="bQF-Oh-moZ" userLabel="HTagPopup" customClass="HTagPopUpController" customModule="TwitterTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nw6-He-Y8j"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Zp-0T-Oka"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4km-AL-h20">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter Hashtag Here" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DhO-ne-twa" userLabel="HashTagInputField">
+                                <rect key="frame" x="30" y="41" width="240" height="42"/>
+                                <color key="backgroundColor" red="0.96097695707070707" green="0.96097695707070707" blue="0.96097695707070707" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hh1-9g-vcD">
+                                <rect key="frame" x="30" y="91" width="240" height="263"/>
+                                <connections>
+                                    <segue destination="uNy-17-TGA" kind="embed" identifier="hTagPopupEmbedPopupTable" id="pJh-Y0-ucf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="400"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="400"/>
+                    <connections>
+                        <outlet property="HashTagInputField" destination="DhO-ne-twa" id="PjE-Vf-Eic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0em-dJ-rJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605" y="762"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="N3P-6A-QxI">
+            <objects>
+                <viewController id="6yX-wd-LGA" userLabel="Main" customClass="MainController" customModule="TwitterTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DB7-kW-CDf"/>
+                        <viewControllerLayoutGuide type="bottom" id="85w-Yn-TiQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DGk-Uf-PXL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-fc-yyW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="pGg-6v-bdr" kind="embed" identifier="mainEmbedTweetTable" id="ifU-8t-ufa"/>
+                                </connections>
+                            </containerView>
+                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apc-mI-yCg">
+                                <rect key="frame" x="265" y="485" width="71" height="75"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="107"/>
+                                <size key="titleShadowOffset" width="4" height="5"/>
+                                <state key="normal" title="#">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bQF-Oh-moZ" kind="popoverPresentation" identifier="mainPopOverHTagPopUp" popoverAnchorView="apc-mI-yCg" id="JRS-B1-uot">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XtS-fc-yyW" firstAttribute="leading" secondItem="DGk-Uf-PXL" secondAttribute="leading" id="3KF-E1-WaG"/>
+                            <constraint firstItem="XtS-fc-yyW" firstAttribute="leading" secondItem="DGk-Uf-PXL" secondAttribute="leadingMargin" id="3sS-zH-4S0"/>
+                            <constraint firstItem="XtS-fc-yyW" firstAttribute="top" secondItem="DGk-Uf-PXL" secondAttribute="top" id="AYl-BK-sQc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XtS-fc-yyW" secondAttribute="trailing" id="BKJ-75-yv3"/>
+                            <constraint firstItem="85w-Yn-TiQ" firstAttribute="top" secondItem="apc-mI-yCg" secondAttribute="bottom" constant="60" id="CUE-CE-Dlq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XtS-fc-yyW" secondAttribute="trailing" id="HqJ-NJ-75w"/>
+                            <constraint firstItem="XtS-fc-yyW" firstAttribute="leading" secondItem="DGk-Uf-PXL" secondAttribute="leadingMargin" id="MOz-Fw-ve1"/>
+                            <constraint firstItem="XtS-fc-yyW" firstAttribute="top" secondItem="DGk-Uf-PXL" secondAttribute="topMargin" id="ROr-AT-24Y"/>
+                            <constraint firstItem="apc-mI-yCg" firstAttribute="leading" secondItem="DGk-Uf-PXL" secondAttribute="leadingMargin" constant="100" id="axL-VS-xKT"/>
+                            <constraint firstItem="85w-Yn-TiQ" firstAttribute="top" secondItem="XtS-fc-yyW" secondAttribute="bottom" id="c1W-02-dxM"/>
+                            <constraint firstItem="85w-Yn-TiQ" firstAttribute="top" secondItem="apc-mI-yCg" secondAttribute="bottom" constant="89" id="d3r-0O-dE3"/>
+                            <constraint firstItem="XtS-fc-yyW" firstAttribute="leading" secondItem="DGk-Uf-PXL" secondAttribute="leadingMargin" id="hOO-7i-zlC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="apc-mI-yCg" secondAttribute="trailing" constant="100" id="sPV-or-jzZ"/>
+                            <constraint firstItem="XtS-fc-yyW" firstAttribute="top" secondItem="DGk-Uf-PXL" secondAttribute="topMargin" id="tK1-Zr-d1l"/>
+                            <constraint firstAttribute="trailing" secondItem="XtS-fc-yyW" secondAttribute="trailing" id="tgA-sj-mya"/>
+                            <constraint firstItem="85w-Yn-TiQ" firstAttribute="top" secondItem="XtS-fc-yyW" secondAttribute="bottom" id="vGw-zd-I5u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XtS-fc-yyW" secondAttribute="trailing" id="xfX-dF-SqT"/>
+                            <constraint firstItem="85w-Yn-TiQ" firstAttribute="top" secondItem="XtS-fc-yyW" secondAttribute="bottom" id="xhn-NT-wfT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3sS-zH-4S0"/>
+                                <exclude reference="BKJ-75-yv3"/>
+                                <exclude reference="HqJ-NJ-75w"/>
+                                <exclude reference="MOz-Fw-ve1"/>
+                                <exclude reference="ROr-AT-24Y"/>
+                                <exclude reference="hOO-7i-zlC"/>
+                                <exclude reference="tK1-Zr-d1l"/>
+                                <exclude reference="xfX-dF-SqT"/>
+                                <exclude reference="c1W-02-dxM"/>
+                                <exclude reference="d3r-0O-dE3"/>
+                                <exclude reference="vGw-zd-I5u"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="addHashTag" destination="apc-mI-yCg" id="n8u-91-CZr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUP-c5-0oS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1379" y="770"/>
+        </scene>
+    </scenes>
+</document>
